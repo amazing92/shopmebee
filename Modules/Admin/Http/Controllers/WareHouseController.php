@@ -14,7 +14,11 @@ class WareHouseController extends Controller
      */
     public function index()
     {
-        return view('admin::index');
+        try{
+            return view('admin::index');
+        }catch (\Exception $exception){
+            abort(500);
+        }
     }
 
     /**
