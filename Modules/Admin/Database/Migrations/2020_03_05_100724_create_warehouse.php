@@ -25,7 +25,7 @@ class CreateWarehouse extends Migration
             $table->date('date_input');
             $table->integer('price');
             $table->text('image')->nullable();
-            $table->integer('inventory ');
+            $table->integer('inventory');
             $table->timestamps();
         });
     }
