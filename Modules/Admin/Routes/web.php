@@ -14,3 +14,7 @@
 Route::prefix('admin')->group(function() {
     Route::get('/', 'AdminController@index');
 });
+Route::prefix('admin')->group(function (){
+    Route::get('/sign-in', 'AuthController@getSignin')->name('admin.getSignin');
+    Route::post('/sign-in', 'AuthController@postSignin')->name('admin.postSignin');
+});
