@@ -14,7 +14,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin::layouts.default');
+        try{
+            return view('admin::layouts.default');
+        }catch (\Exception $exception){
+            abort('500');
+        }
     }
 
     /**
