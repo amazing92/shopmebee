@@ -74,7 +74,6 @@ class AdminServiceProvider extends ServiceProvider
     public function registerTranslations()
     {
         $langPath = resource_path('lang/modules/admin');
-
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, 'admin');
         } else {
