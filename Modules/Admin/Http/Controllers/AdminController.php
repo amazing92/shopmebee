@@ -14,7 +14,12 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin::index');
+        try{
+            dd("cuongpt");
+            return view('admin::layouts.default');
+        }catch (\Exception $exception){
+            abort('500');
+        }
     }
 
     /**
